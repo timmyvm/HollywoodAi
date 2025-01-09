@@ -29,7 +29,7 @@ export default function Testimonials() {
             <Image src="/assets/testimonial-3.png" alt="Anisong Silkum" width={77} height={77} className="mb-2" />
             <span className="text-lg font-bold text-gray-800">Anisong Silkum</span>
             <span className="text-lg font-medium text-gray-400">Student</span>
-            <p className="mt-4 text-base font-medium text-center max-w-xs">"The summaries provide a really great overview of the movies. It&apos;s also very easy to use. 5/5!"</p>
+            The summaries provide a really great overview of the movies. It's also very easy to use. 5/5!
           </div>
         </div>
       </div>
