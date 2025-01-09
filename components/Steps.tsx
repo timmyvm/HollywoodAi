@@ -44,7 +44,7 @@ export default function Steps() {
                 <span>3</span>
               </div>
               <div className="text-[18px] font-light leading-6 max-w-[280px] w-full">
-                Take a couple of minutes to read and listen to the summary. And you’re done!
+                Take a couple of minutes to read and listen to the summary. And you&apos;re done!
               </div>
             </div>
           </div>

@@ -21,7 +21,7 @@ export default function Features() {
               </div> 
               <div>
                 <h4 className="text-lg font-bold text-[#2c2e48] mb-2">AI Generated Summaries</h4>
-                <p className="text-sm leading-6 text-gray-600">Save time with summaries of the world's best movies.</p>
+                Save time with summaries of the world&apos;s best movies.
               </div>
             </div>
             <div className="w-full sm:w-1/2 lg:w-1/3 p-4 flex gap-5">
