@@ -1,6 +1,8 @@
+
 import { faPlay } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import React from 'react';
+import Image from 'next/image';
 
 export default function Header() {
   return (
@@ -14,7 +16,7 @@ export default function Header() {
         <h1 className="text-[52px] sm:text-[64px] md:text-[84px]  font-bold leading-[77px] text-center text-white mb-[28px]">
           Ultimate AI <br className="" />
           Summariser
-          <img src="assets/bolt.svg" alt="" className="translate-y-[4px]" />
+<Image src="/assets/bolt.svg" alt="" width={40} height={40} className="translate-y-[4px]" />
         </h1>
         <p className="text-[20px] font-medium leading-[25px] max-w-[480px] w-full opacity-75 text-[#e5e6e6] text-center mb-[20px]">
           All-in-one platform to watch your favourite movies in minutes using AI.
