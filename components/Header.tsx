@@ -4,14 +4,14 @@ import React from 'react';
 
 export default function Header() {
   return (
-    <header className="bg-gradient-to-r from-[#5d92e8] flex-col justify-center to-[#ca71ff] bg-[length:200%_200%] animate-gradient-animation py-[208px] h-[90vh] flex items-center relative">
+    <header className="flex-col justify-center bg-gradient-to-r from-[#70acd4] via-[#ca71ff] to-[#70acd4] bg-[length:200%_200%] py-[52px] h-[90vh] flex items-center relative animate-gradient">
       <div className="flex flex-col justify-center items-center">
         <div className="p-[5px_13px_3px_13px] bg-[#ffffff26] rounded-[20px] text-[10px] leading-[11px] font-bold flex items-center gap-[6px] mb-[32px]">
           <span className="text-white">Meet HollywoodAI</span>
           <span className="text-[6px] text-black"> ⏺</span>
           <span className="text-[#e5e6e6] opacity-60">Unleash the Power of AI</span>
         </div>
-        <h1 className="text-[84px] font-bold leading-[77px] text-center text-white mb-[28px]">
+        <h1 className="text-[52px] sm:text-[64px] md:text-[84px]  font-bold leading-[77px] text-center text-white mb-[28px]">
           Ultimate AI <br className="" />
           Summariser
           <img src="assets/bolt.svg" alt="" className="translate-y-[4px]" />

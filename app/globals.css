@@ -7,9 +7,9 @@
   --foreground: #171717;
 }
 
-@media (prefers-color-scheme: dark) {
+@media (prefers-color-scheme: light) {
   :root {
-    --background: #0a0a0a;
+    --background: #ffffff;
     --foreground: #ededed;
   }
 }
@@ -20,11 +20,6 @@ body {
   font-family: Arial, Helvetica, sans-serif;
 }
 
-@keyframes gradient-animation {
-  0% {
-    background-position: 0% 100%;
-  }
-  100% {
-    background-position: 100% 100%;
-  }
+.animate-gradient {
+  animation: gradient-animation 20s ease-in-out alternate infinite;
 }

@@ -8,7 +8,7 @@ export default function NavBar() {
   <a href="#">
     <Image src={Logo} alt="Logo" height={40} />
   </a>
-  <div className="flex gap-4">
+  <div className="gap-4 hidden lg:flex">
     <a href="#" className="text-sm font-semibold py-2 px-4 text-gray-900 rounded-lg transition duration-300 cursor-not-allowed hover:bg-black/10">
       About
     </a>
