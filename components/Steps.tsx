@@ -33,7 +33,7 @@ export default function Steps() {
                 <span>2</span>
               </div>
               <div className="text-[18px] font-light leading-6 max-w-[280px] w-full">
-                Simply select a movie you'd like to have summarised and let our AI algorithms do the rest.
+                Simply select a movie you&apos;d like to have summarised and let our AI algorithms do the rest.
               </div>
             </div>
             {/* Step 3 */}

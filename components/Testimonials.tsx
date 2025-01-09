@@ -23,13 +23,13 @@ export default function Testimonials() {
             <Image src="/assets/testimonial-2.png" alt="Eric Fisherman" width={77} height={77} className="mb-2" />
             <span className="text-lg font-bold text-gray-800">Eric Fisherman</span>
             <span className="text-lg font-medium text-gray-400">Professor</span>
-            <p className="mt-4 text-base font-medium text-center max-w-xs">"Definitely worth the purchase if you are a busy person who stills want to keep up with the latest movies"</p>
+            <p className="mt-4 text-base font-medium text-center max-w-xs">"Definitely worth the purchase if you are a busy person who still wants to keep up with the latest movies"</p>
           </div>
           <div className="flex flex-col items-center">
             <Image src="/assets/testimonial-3.png" alt="Anisong Silkum" width={77} height={77} className="mb-2" />
             <span className="text-lg font-bold text-gray-800">Anisong Silkum</span>
             <span className="text-lg font-medium text-gray-400">Student</span>
-            <p className="mt-4 text-base font-medium text-center max-w-xs">"The summaries provide a really great overview of the movies. It's also very easy to use. 5/5!"</p>
+            <p className="mt-4 text-base font-medium text-center max-w-xs">"The summaries provide a really great overview of the movies. It&apos;s also very easy to use. 5/5!"</p>
           </div>
         </div>
       </div>

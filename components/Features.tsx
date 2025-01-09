@@ -12,6 +12,7 @@ export default function Features() {
           </h1>
           <p className="text-lg leading-6 text-center text-[#3c4b62] mb-10 max-w-[500px] font-normal">
             HollywoodAI is designed to help you enjoy high-quality summaries instantly, without breaking a sweat.
+            It&apos;s designed to help you enjoy high-quality summaries instantly, without breaking a sweat.
           </p>
           <div className="flex flex-wrap justify-center">
             <div className="w-full sm:w-1/2 lg:w-1/3 p-4 flex gap-5">
