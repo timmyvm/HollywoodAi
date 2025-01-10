@@ -3,6 +3,7 @@ import { faPlay } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import React from 'react';
 import Image from 'next/image';
+import BoltSvg from '../public/bolt.svg';
 
 export default function Header() {
   return (
@@ -13,11 +14,20 @@ export default function Header() {
           <span className="text-[6px] text-black"> ⏺</span>
           <span className="text-[#e5e6e6] opacity-60">Unleash the Power of AI</span>
         </div>
-        <h1 className="text-[52px] sm:text-[64px] md:text-[84px]  font-bold leading-[77px] text-center text-white mb-[28px]">
-          Ultimate AI <br className="" />
-          Summariser
-<Image src="/assets/bolt.svg" alt="" width={40} height={40} className="translate-y-[4px]" />
-        </h1>
+        <h1 className="text-[52px] sm:text-[64px] md:text-[84px] font-bold leading-[77px] text-center text-white mb-[28px]">
+  Ultimate AI <br className="" /> {/* Top Text */}
+  <span className="inline-flex items-center gap-[8px]">
+    Summariser {/* Text and SVG aligned horizontally */}
+    <Image
+      src={BoltSvg}
+      alt="Bolt"
+      width={40}
+      height={40}
+      className="translate-y-[4px]"
+    />
+  </span>
+</h1>
+
         <p className="text-[20px] font-medium leading-[25px] max-w-[480px] w-full opacity-75 text-[#e5e6e6] text-center mb-[20px]">
           All-in-one platform to watch your favourite movies in minutes using AI.
         </p>
