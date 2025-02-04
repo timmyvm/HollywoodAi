@@ -11,12 +11,14 @@ const modalSlice = createSlice({
   reducers: {
     openLogInModal: (state) => {
       state.logInModalOpen = true;
+      state.signUpModalOpen = false; 
     },
     closeLogInModal: (state) => {
       state.logInModalOpen = false;
     },
     openSignUpModal: (state) => {
       state.signUpModalOpen = true;
+      state.logInModalOpen = false; 
     },
     closeSignUpModal: (state) => {
       state.signUpModalOpen = false;

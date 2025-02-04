@@ -1,6 +1,7 @@
 import Image from 'next/image'
 import React from 'react'
 import BoltSvg from '../../public/bolt.svg'
+import LogInModal from '../Modals/LoginModal'
 
 export default function Cta() {
   return (
@@ -26,10 +27,17 @@ export default function Cta() {
       <p className="text-lg text-gray-500 text-center mb-9 max-w-md">
         Enjoy your favourite movies in minutes by letting AI do the work for you.
       </p>
-      <button className="flex items-center justify-center gap-3 bg-[#1a1a1a] text-white text-base font-semibold py-4 px-8 rounded-lg hover:scale-105 transition-transform">
+      {/* <button className="flex items-center justify-center gap-3 bg-[#1a1a1a] text-white text-base font-semibold py-4 px-8 rounded-lg hover:scale-105 transition-transform">
         <span>Join HollywoodAI</span>
         <Image src={BoltSvg} alt="Bolt Icon" width={16} height={16} /> 
-      </button>
+      </button> */}
+
+      
+              <LogInModal
+                text={"Join HollywoodAI"}
+                style={"flex items-center justify-center gap-3 bg-[#1a1a1a] text-white text-base font-semibold py-4 px-8 rounded-lg hover:scale-105 transition-transform"}
+                icon={<Image src={BoltSvg} alt="Bolt Icon" width={16} height={16} />}
+              />
     </div>
   </section>
   

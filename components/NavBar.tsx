@@ -39,7 +39,7 @@ export default function NavBar() {
           Privacy policy
         </a>
       </div>
-      <LogInModal style={"h-10 text-base font-semibold px-4 py-2 flex items-center justify-center rounded-lg transition duration-200 ease transform bg-black/10 border-0 text-black hover:text-white hover:bg-black hover:scale-110"}/>
+      <LogInModal text={"Sign up"} style={"h-10 text-base font-semibold px-4 py-2 flex items-center justify-center rounded-lg transition duration-200 ease transform bg-black/10 border-0 text-black hover:text-white hover:bg-black hover:scale-110"}/>
     </nav>
   );
 }
