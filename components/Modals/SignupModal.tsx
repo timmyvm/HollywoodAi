@@ -4,9 +4,9 @@ import React, { useState } from "react";
 import { Modal } from "@mui/material";
 import { useSelector, useDispatch } from "react-redux";
 import { RootState } from "@/redux/store";
-import { openSignUpModal, closeSignUpModal, openLogInModal, switchToLogInModal } from "@/redux/slices/modalSlice";
+import { openSignUpModal, closeSignUpModal, openLogInModal, switchToLogInModal, closeLogInModal } from "@/redux/slices/modalSlice";
 import { auth, googleAuthProvider } from "@/firebase";
-import { createUserWithEmailAndPassword, signInWithPopup } from "firebase/auth";
+import { createUserWithEmailAndPassword, signInWithEmailAndPassword, signInWithPopup } from "firebase/auth";
 
 interface SignUpModalProps {
   style: string;
@@ -15,12 +15,7 @@ interface SignUpModalProps {
   icon?: React.ReactNode;
 }
 
-export default function SignUpModal({
-  style,
-  text,
-  style2,
-  icon,
-}: SignUpModalProps) {
+export default function SignUpModal() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [confirmPassword, setConfirmPassword] = useState("");
@@ -58,11 +53,25 @@ export default function SignUpModal({
     }
   };
 
+   const handleGuestLogIn = async () => {
+      setError(null);
+      try {
+        await signInWithEmailAndPassword(
+          auth,
+          "guestuser@gmail.com",
+          "guestPassword123"
+        );
+        dispatch(closeSignUpModal());
+      } catch (error: any) {
+        console.error("Error logging in as guest:", error);
+        setError("Guest login failed. Please try again.");
+      }
+    };
+
   return (
     <>
-      <button className={style} onClick={() => dispatch(openSignUpModal())}>
-        {icon && <div className={style2}>{icon}</div>}
-        <span>{text}</span>
+      <button className="text-[#320580] underline"  onClick={() => dispatch(openSignUpModal())}>
+        <span>  Sign Up</span>
       </button>
 
       <Modal
@@ -70,7 +79,7 @@ export default function SignUpModal({
         onClose={() => dispatch(closeSignUpModal())}
         className="flex justify-center items-center"
       >
-        <div className="h-full w-full flex flex-col xs:w-full xs:max-w-[400px] xs:h-[640px] p-8 border border-transparent rounded-xl bg-white outline-none absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-1">
+        <div className="h-full w-full flex flex-col xs:w-full xs:max-w-[400px] xs:h-[700px] p-8 border border-transparent rounded-xl bg-white outline-none absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-1">
           <h3 className="text-center mb-5 text-[32px] font-bold text-[#1f2328]">
             Sign Up
           </h3>
@@ -96,6 +105,27 @@ export default function SignUpModal({
               />
             </svg>
             Sign up with Google
+          </div>
+
+          <div
+            onClick={handleGuestLogIn}
+            className="flex justify-start items-center gap-3 rounded-xl text-[14px] font-semibold py-3 px-5 text-[#404654] border-2 border-[#ebebeb] bg-white transition duration-300 hover:translate-y-[-2px] cursor-pointer"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="1.5"
+              stroke="currentColor"
+              className="size-5"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M15.75 6a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0ZM4.501 20.118a7.5 7.5 0 0 1 14.998 0A17.933 17.933 0 0 1 12 21.75c-2.676 0-5.216-.584-7.499-1.632Z"
+              />
+            </svg>
+            Sign Up as Guest
           </div>
 
           <div className="my-6 flex items-center gap-8 text-black text-opacity-60">

@@ -7,6 +7,7 @@ import { RootState } from "../../redux/store";
 import { openLogInModal, closeLogInModal, openSignUpModal, switchToSignUpModal } from "../../redux/slices/modalSlice";
 import { auth, googleAuthProvider } from "@/firebase";
 import { signInWithEmailAndPassword, signInWithPopup } from "firebase/auth";
+import SignUpModal from "./SignupModal";
 
 interface LogInModalProps {
   style: string;
@@ -76,7 +77,7 @@ export default function LogInModal({
         onClose={() => dispatch(closeLogInModal())}
         className="flex justify-center items-center"
       >
-        <div className="h-full w-full flex flex-col xs:w-full xs:max-w-[400px] xs:h-[640px] p-8 border border-transparent rounded-xl bg-white outline-none absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-1">
+        <div className="h-full w-full flex flex-col xs:w-full xs:max-w-[400px] xs:h-[660px] p-8 border border-transparent rounded-xl bg-white outline-none absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-1">
           <h3 className="text-center mb-5 text-[32px] font-bold text-[#1f2328]">
             Log in
           </h3>
@@ -168,15 +169,8 @@ export default function LogInModal({
           </form>
 
           <p className="mt-4 text-center text-sm">
-            Don't have an account yet?
-            <button
-              onClick={() => {
-                dispatch(switchToSignUpModal());
-              }}
-              className="text-[#320580] underline"
-            >
-              Sign Up
-            </button>
+            Don't have an account yet?{" "}
+            <SignUpModal/>
           </p>
         </div>
       </Modal>
