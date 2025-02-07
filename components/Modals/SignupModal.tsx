@@ -4,7 +4,7 @@ import React, { useState } from "react";
 import { Modal } from "@mui/material";
 import { useSelector, useDispatch } from "react-redux";
 import { RootState } from "@/redux/store";
-import { openSignUpModal, closeSignUpModal, openLogInModal } from "@/redux/slices/modalSlice";
+import { openSignUpModal, closeSignUpModal, openLogInModal, switchToLogInModal } from "@/redux/slices/modalSlice";
 import { auth, googleAuthProvider } from "@/firebase";
 import { createUserWithEmailAndPassword, signInWithPopup } from "firebase/auth";
 
@@ -155,8 +155,7 @@ export default function SignUpModal({
             <a
               href="#"
               onClick={() => {
-                dispatch(closeSignUpModal());
-                dispatch(openLogInModal());
+                dispatch(switchToLogInModal());
               }}
               className="text-[#320580] underline"
             >

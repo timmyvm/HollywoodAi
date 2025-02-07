@@ -11,17 +11,23 @@ const modalSlice = createSlice({
   reducers: {
     openLogInModal: (state) => {
       state.logInModalOpen = true;
-      state.signUpModalOpen = false; 
     },
     closeLogInModal: (state) => {
       state.logInModalOpen = false;
     },
     openSignUpModal: (state) => {
       state.signUpModalOpen = true;
-      state.logInModalOpen = false; 
     },
     closeSignUpModal: (state) => {
       state.signUpModalOpen = false;
+    },
+    switchToSignUpModal: (state) => {
+      state.logInModalOpen = false;
+      state.signUpModalOpen = true;
+    },
+    switchToLogInModal: (state) => {
+      state.signUpModalOpen = false;
+      state.logInModalOpen = true;
     },
   },
 });
@@ -31,6 +37,8 @@ export const {
   closeLogInModal,
   openSignUpModal,
   closeSignUpModal,
+  switchToLogInModal,
+  switchToSignUpModal
 } = modalSlice.actions;
 
 export default modalSlice.reducer;

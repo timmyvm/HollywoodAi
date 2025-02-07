@@ -4,7 +4,7 @@ import React, { useState } from "react";
 import { Modal } from "@mui/material";
 import { useDispatch, useSelector } from "react-redux";
 import { RootState } from "../../redux/store";
-import { openLogInModal, closeLogInModal, openSignUpModal } from "../../redux/slices/modalSlice";
+import { openLogInModal, closeLogInModal, openSignUpModal, switchToSignUpModal } from "../../redux/slices/modalSlice";
 import { auth, googleAuthProvider } from "@/firebase";
 import { signInWithEmailAndPassword, signInWithPopup } from "firebase/auth";
 
@@ -168,17 +168,15 @@ export default function LogInModal({
           </form>
 
           <p className="mt-4 text-center text-sm">
-            Don't have an account yet?{" "}
-            <a
-              href="#"
+            Don't have an account yet?
+            <button
               onClick={() => {
-                dispatch(closeLogInModal());
-                dispatch(openSignUpModal());
+                dispatch(switchToSignUpModal());
               }}
               className="text-[#320580] underline"
             >
               Sign Up
-            </a>
+            </button>
           </p>
         </div>
       </Modal>
